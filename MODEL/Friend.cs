@@ -6,9 +6,8 @@ namespace MODEL
 {
     [Table ("Friends")]
     [Serializable]
-    public class Friend
+    public class Friend : BaseEntity
     {
-        private int id;
         private string family;
         private string name;
         private DateTime birthDate;
@@ -20,7 +19,7 @@ namespace MODEL
         public Friend() { }
 
         [AutoIncrement, PrimaryKey]
-        public int Id { get => id; set => id = value; }
+        public int Id { get => id; }
         public string Family { get => family; set => family = value; }
         public string Name { get => name; set => name = value; }
         public DateTime BirthDate { get => birthDate; set => birthDate = value; }
